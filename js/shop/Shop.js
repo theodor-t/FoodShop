@@ -24,8 +24,8 @@ class Shop {
         })
     }
 
-    getCategoryItems(category) {
-        console.log(category);
+    getCategoryItems(categoryName) {
+       return this._products.filter( ({ category }) => category === categoryName);
     }
 
 
