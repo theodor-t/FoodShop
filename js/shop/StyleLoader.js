@@ -9,7 +9,7 @@ class StyleLoader {
         categories.forEach(category => {
             categoryContainer.innerHTML +=
                 `<li class="nav-item active">
-                    <a href="" class="nav-link">${category}</a>
+                    <a class="nav-link">${category}</a>
                  </li>`
         })
     }

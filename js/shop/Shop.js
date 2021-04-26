@@ -14,4 +14,19 @@ class Shop {
         this.categoryHandler();
     }
 
+    categoryHandler() {
+        const categoryItems = document.querySelectorAll("#category_container li");
+
+        categoryItems.forEach(categoryItem => {
+            categoryItem.addEventListener('click', (e) => {
+                this.getCategoryItems(e.target.innerHTML);
+            })
+        })
+    }
+
+    getCategoryItems(category) {
+        console.log(category);
+    }
+
+
 }
