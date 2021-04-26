@@ -1,6 +1,7 @@
 class Shop {
     _products;
-    _cartProducts;
+    _cartProducts = [];
+    _id;
 
     constructor(service) {
         this.service = service;
@@ -38,12 +39,40 @@ class Shop {
         const productsBtns = document.querySelectorAll('#product__container button');
 
         productsBtns.forEach(productBtn => {
+            productBtn.addEventListener('click', () => {
+                this._id = Number(productBtn.getAttribute("data-id"));
+                this.addToCart(Number(productBtn.getAttribute("data-id")));
+            })
 
         })
     }
 
+    addToCart(id) {
+        if (this.isInCart(id)) {
+            this.modifyQuantity(id);
+        } else {
+            this._cartProducts.push({
+                "id": id,
+                "quantity": 1
+            })
+        }
+
+        console.log(this._cartProducts);
+    }
+
+    modifyQuantity(id) {
+        this._cartProducts.forEach(element => {
+            if (element.id === id) element.quantity += 1;
+        })
+    }
+
+    isInCart() {
+        if (this._cartProducts.length === 0) return false;
+        return this._cartProducts.find(this.searchPredicate, this);
+    }
+
     searchPredicate(product) {
-        return this._cartProducts.find(({id}) => id === product.id)
+        return product.id === this._id;
     }
 
 
