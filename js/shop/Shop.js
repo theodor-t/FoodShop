@@ -17,6 +17,14 @@ class Shop {
 
         this.categoryHandler();
         this.productHandler();
+
+        StyleLoader.renderCartCount(this.cartCount)
+    }
+
+    get cartCount() {
+        return this._cartProducts.reduce((accumulator, value) => {
+            return accumulator + value.quantity
+        }, 0)
     }
 
     categoryHandler() {
@@ -74,6 +82,5 @@ class Shop {
     searchPredicate(product) {
         return product.id === this._id;
     }
-
 
 }

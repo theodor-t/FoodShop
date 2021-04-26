@@ -39,4 +39,8 @@ class StyleLoader {
                  </li>`
         })
     }
+
+    static renderCartCount(count) {
+       document.getElementById('cart__count').innerText = `${count}`;
+    }
 }
