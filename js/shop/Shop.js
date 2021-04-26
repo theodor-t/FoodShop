@@ -1,6 +1,6 @@
 class Shop {
     _products;
-    _cartProducts = [];
+    _cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
     _id;
 
     constructor(service) {
@@ -50,6 +50,7 @@ class Shop {
     addToCart(id) {
         if (this.isInCart(id)) {
             this.modifyQuantity(id);
+            localStorage.setItem("cart", JSON.stringify(this._cartProducts));
             return;
         }
         this._cartProducts.push({
