@@ -10,6 +10,7 @@ class Shop {
         StyleLoader.renderCategories([...new Set(
             this._products.map(product => product.category)
         )]);
+        StyleLoader.renderProducts(this._products);
 
         this.categoryHandler();
     }
@@ -25,6 +26,7 @@ class Shop {
     }
 
     getCategoryItems(categoryName) {
+        if (categoryName === "all") return this._products;
        return this._products.filter( ({ category }) => category === categoryName);
     }
 
