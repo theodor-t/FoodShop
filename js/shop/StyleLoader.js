@@ -43,4 +43,11 @@ class StyleLoader {
     static renderCartCount(count) {
        document.getElementById('cart__count').innerText = `${count}`;
     }
+
+    static renderCart(products) {
+        const cartContainer = document.getElementById("cart__items");
+
+        //products.forEach(product)
+
+    }
 }

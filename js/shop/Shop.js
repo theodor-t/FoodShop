@@ -51,7 +51,6 @@ class Shop {
                 this._id = Number(productBtn.getAttribute("data-id"));
                 this.addToCart(Number(productBtn.getAttribute("data-id")));
             })
-
         })
     }
 
@@ -65,7 +64,7 @@ class Shop {
             });
         }
 
-        StyleLoader.renderCartCount(this.cartCount)
+        StyleLoader.renderCartCount(this.cartCount);
         localStorage.setItem("cart", JSON.stringify(this._cartProducts));
     }
 
