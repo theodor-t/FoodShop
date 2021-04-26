@@ -25,7 +25,7 @@ class StyleLoader {
                         </h4>
                         <button class="btn btn-danger btn-md my-0 p" data-id="${product.id}"> Add to cart <i
                                 class="fa fa-shopping-cart ml-1"></i></button>
-                    </div>`
+                </div>`
         })
     }
 
