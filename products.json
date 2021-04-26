@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Philadelphia",
+    "category": "rolls",
+    "weight": "160g",
+    "image": "philadelphia.jpg",
+    "price": 60
+  },
+  {
+    "id": 2,
+    "name": "California",
+    "category": "rolls",
+    "weight": "160g",
+    "image": "california.jpg",
+    "price": 70
+  },
+   {
+    "id": 3,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "maki.jpg",
+    "price": 50
+  },
+  {
+      "id": 4,
+      "name": "Maki",
+      "category": "sets",
+      "weight": "120g",
+      "image": "maki.jpg",
+      "price": 50
+    }
+]
