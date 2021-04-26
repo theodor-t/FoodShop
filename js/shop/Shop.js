@@ -19,7 +19,7 @@ class Shop {
 
         categoryItems.forEach(categoryItem => {
             categoryItem.addEventListener('click', (e) => {
-                this.getCategoryItems(e.target.innerHTML);
+                StyleLoader.renderProducts(this.getCategoryItems(e.target.innerHTML));
             })
         })
     }
