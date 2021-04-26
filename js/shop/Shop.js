@@ -58,13 +58,14 @@ class Shop {
     addToCart(id) {
         if (this.isInCart(id)) {
             this.modifyQuantity(id);
-            localStorage.setItem("cart", JSON.stringify(this._cartProducts));
-            return;
+        } else {
+            this._cartProducts.push({
+                "id": id,
+                "quantity": 1
+            });
         }
-        this._cartProducts.push({
-            "id": id,
-            "quantity": 1
-        });
+
+        StyleLoader.renderCartCount(this.cartCount)
         localStorage.setItem("cart", JSON.stringify(this._cartProducts));
     }
 
