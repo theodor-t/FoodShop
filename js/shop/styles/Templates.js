@@ -22,4 +22,10 @@ class Templates {
                                 class="fa fa-shopping-cart ml-1"></i></button>
                 </div>`
     }
+
+    static categoryTemplate(category) {
+        return `<li class="nav-item active">
+                    <a class="nav-link">${category}</a>
+                 </li>`
+    }
 }

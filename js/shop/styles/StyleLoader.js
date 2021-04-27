@@ -12,10 +12,7 @@ class StyleLoader {
         const categoryContainer = document.getElementById('category_container');
 
         categories.forEach(category => {
-            categoryContainer.innerHTML +=
-                `<li class="nav-item active">
-                    <a class="nav-link">${category}</a>
-                 </li>`
+            categoryContainer.innerHTML += Templates.categoryTemplate(category)
         })
     }
 
