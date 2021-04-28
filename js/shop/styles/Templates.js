@@ -30,7 +30,7 @@ class Templates {
     }
 
     static cartItemTemplate(item) {
-        return `<div class="row mb-4">
+        return `<div class="row mb-4" data-id="${item.id}">
                             <div class="col-md-5 col-lg-3 col-xl-3">
                                 <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
                                     <img class="img-fluid w-100"

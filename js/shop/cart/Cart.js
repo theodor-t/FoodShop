@@ -5,10 +5,14 @@ class Cart {
     }
 
     init() {
-        StyleLoader.renderCartCount(this.cartCount);
         StyleLoader.renderCart(this._cartItems);
-        StyleLoader.renderTotalPrice(this.cartPrice);
+        this.updateCountPrice();
         this.productRemoveHandler();
+    }
+
+    updateCountPrice() {
+        StyleLoader.renderCartCount(this.cartCount);
+        StyleLoader.renderTotalPrice(this.cartPrice);
     }
 
     get cartCount() {
@@ -35,6 +39,11 @@ class Cart {
 
     productRemove(event) {
         const parent = this.getParentElement(event.target, "row mb-4");
+        this._cartItems.splice(
+            this._cartItems.findIndex(({id}) => Number(parent.getAttribute("data-id")) === id), 1
+        );
+        localStorage.setItem("cart", JSON.stringify(this._cartItems));
+        this.updateCountPrice();
         parent?.remove();
     }
 
