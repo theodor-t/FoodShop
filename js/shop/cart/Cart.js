@@ -91,5 +91,6 @@ class Cart {
             if (item.id === itemID) item.quantity += value
         });
         localStorage.setItem("cart", JSON.stringify(this._cartItems));
+        this.updateCountPrice();
     }
 }
