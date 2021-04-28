@@ -26,7 +26,10 @@ class StyleLoader extends Templates {
         products.forEach(product => {
             cartContainer.innerHTML += this.cartItemTemplate(product)
         })
-
     }
 
+    static renderTotalPrice(price) {
+        document.querySelector("#temporary__amount").innerHTML = `${price} lei`;
+        document.querySelector("#total__amount").innerHTML = `${price} lei`;
+    }
 }

@@ -2,8 +2,6 @@ class Shop {
     _products;
     _cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
     _id;
-    _image;
-    _name;
 
     constructor(service) {
         if (typeof service === "undefined") return;
