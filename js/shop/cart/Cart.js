@@ -79,16 +79,17 @@ class Cart {
 
         if (parseInt(quantityHolder.value) + value >= 1) {
             quantityHolder.value = `${parseInt(quantityHolder.value) + value}`;
-            this.modifyCartVQuantity(
+
+            this.modifyCartQuantity(
                 Number(this.getTargetElement(evt.target, "row mb-4").getAttribute("data-id")),
-                (Math.sign(value) === 1) ? '+' : '-'
+                value
             )
         }
     }
 
-    modifyCartVQuantity(itemID, operation) {
+    modifyCartQuantity(itemID, value) {
         this._cartItems.forEach(item => {
-            if (this._cartItems.find(({id}) => itemID === id)) item.quantity = eval(`${item.quantity}${operation}1`);
+            if (item.id === itemID) item.quantity += value;
         });
         localStorage.setItem("cart", JSON.stringify(this._cartItems));
     }
