@@ -48,14 +48,14 @@ class Templates {
                                         <div>
                                             <div class="def-number-input number-input safari_only mb-0 w-100">
                                                 <button class="btn btn-dark btn-md my-0 p">
-                                                    <em class="fas fa-minus-square fa-lg "></em>
+                                                    <em class="fas fa-minus-square fa-lg decrease__item"></em>
                                                 </button>
                                                 <label>
                                                     <input class="quantity" min="0" name="quantity" type="number"
                                                            value="${item.quantity}">
                                                 </label>
                                                 <button class="btn btn-dark btn-md my-0 p">
-                                                    <em class="fas fa-plus-square fa-lg "></em>
+                                                    <em class="fas fa-plus-square fa-lg increase__item"></em>
                                                 </button>
                                             </div>
                                         </div>
@@ -64,7 +64,7 @@ class Templates {
                                         <div>
                                             <a class="card-link-secondary small text-uppercase mr-3" href=""
                                                type="button"><em
-                                                    class="fas fa-trash-alt mr-1"></em>Remove item </a>
+                                                    class="fas fa-trash-alt mr-1 remove__cart__item"></em>Remove item </a>
                                         </div>
                                         <p class="mb-0"><span><strong>${item.price} lei</strong></span></p>
                                     </div>

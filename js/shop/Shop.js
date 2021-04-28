@@ -66,8 +66,9 @@ class Shop {
     }
 
     addToCart(id) {
-        (this.isInCart()) ? this.modifyQuantity(id) :
-            this._cartProducts.push(this._products.find(this.searchPredicate, this), {"quantity": 1});
+        (this.isInCart()) ? this.modifyQuantity(id) : this._cartProducts.push(Object.assign(
+            {}, this._products.find(this.searchPredicate, this), {"quantity": 1}
+        ));
 
         StyleLoader.renderCartCount(this.cartCount);
         localStorage.setItem("cart", JSON.stringify(this._cartProducts));
@@ -87,5 +88,4 @@ class Shop {
     searchPredicate(product) {
         return product.id === this._id;
     }
-
 }
