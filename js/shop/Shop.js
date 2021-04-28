@@ -49,9 +49,9 @@ class Shop {
     }
 
     productHandler() {
-        const productsBtns = document.querySelectorAll('#product__container button');
+        const productsButtons = document.querySelectorAll('#product__container button');
 
-        productsBtns.forEach(productBtn => {
+        productsButtons.forEach(productBtn => {
             productBtn.addEventListener('click', () => {
                 this._id = Number(productBtn.getAttribute("data-id"));
                 this.addToCart(Number(productBtn.getAttribute("data-id")));
@@ -59,23 +59,23 @@ class Shop {
         })
     }
 
-    addToCart(id) {
-        (this.isInCart()) ? this.modifyQuantity(id) : this._cartProducts.push(Object.assign(
-            {}, this._products.find(({id}) => this._id === id), {"quantity": 1}
+    addToCart(itemID) {
+        (this.isInCart()) ? this.modifyQuantity(itemID) : this._cartProducts.push(Object.assign(
+            {}, this._products.find(({id}) => this._id === itemID), {"quantity": 1}
         ));
 
         StyleLoader.renderCartCount(this.cartCount);
-        localStorage.setItem("cart", JSON.stringify(this._cartProducts));
+        localStorage.setItem("cart", JSON.stringify(this._cartProducts))
     }
 
     modifyQuantity(id) {
         this._cartProducts.forEach(element => {
-            if (element.id === id) element.quantity += 1;
+            if (element.id === id) element.quantity += 1
         })
     }
 
     isInCart() {
         if (this._cartProducts.length === 0) return false;
-        return this._cartProducts.find(({id}) => this._id === id);
+        return this._cartProducts.find(({id}) => this._id === id)
     }
 }

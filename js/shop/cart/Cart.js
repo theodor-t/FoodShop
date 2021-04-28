@@ -50,9 +50,9 @@ class Cart {
     }
 
     getTargetElement(elem, selector) {
-        for (; elem && elem !== document; elem = elem.parentElement) {
-            if (elem.classList.value === selector) return elem
-        }
+        for (; elem && elem !== document; elem = elem.parentElement)
+            if (elem.classList.value === selector) return elem;
+
         return null;
     }
 
@@ -82,14 +82,13 @@ class Cart {
 
             this.modifyCartQuantity(
                 Number(this.getTargetElement(evt.target, "row mb-4").getAttribute("data-id")),
-                value
-            )
+                value)
         }
     }
 
     modifyCartQuantity(itemID, value) {
         this._cartItems.forEach(item => {
-            if (item.id === itemID) item.quantity += value;
+            if (item.id === itemID) item.quantity += value
         });
         localStorage.setItem("cart", JSON.stringify(this._cartItems));
     }
