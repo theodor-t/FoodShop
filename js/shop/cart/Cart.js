@@ -80,5 +80,10 @@ class Cart {
         quantityHolder.value += value;
     }
 
+    modifyValue(value) {
+        this._cartItems.forEach(item => {
+            if (this.searchPredicate(item)) item.quantity = eval(`${item.quantity}${value}1`);
+        });
+    }
 
 }

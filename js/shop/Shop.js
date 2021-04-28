@@ -61,7 +61,7 @@ class Shop {
 
     addToCart(id) {
         (this.isInCart()) ? this.modifyQuantity(id) : this._cartProducts.push(Object.assign(
-            {}, this._products.find(this.searchPredicate, this), {"quantity": 1}
+            {}, this._products.find(({id}) => this._id === id), {"quantity": 1}
         ));
 
         StyleLoader.renderCartCount(this.cartCount);
@@ -76,10 +76,6 @@ class Shop {
 
     isInCart() {
         if (this._cartProducts.length === 0) return false;
-        return this._cartProducts.find(this.searchPredicate, this);
-    }
-
-    searchPredicate(product) {
-        return product.id === this._id;
+        return this._cartProducts.find(({id}) => this._id === id);
     }
 }
