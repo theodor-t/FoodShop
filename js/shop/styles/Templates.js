@@ -28,4 +28,49 @@ class Templates {
                     <a class="nav-link">${category}</a>
                  </li>`
     }
+
+    static cartItemTemplate(item) {
+        return `<div class="row mb-4">
+                            <div class="col-md-5 col-lg-3 col-xl-3">
+                                <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+                                    <img class="img-fluid w-100"
+                                         alt="Sample" src="img/products/${item.image}">
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-9 col-xl-9">
+                                <div>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h5>${item.name}</h5>
+                                            <p class="mb-3 text-muted text-uppercase small">Weight - ${item.weight}</p>
+                                            <p class="mb-2 text-muted text-uppercase small">Category - ${item.category}</p>
+                                        </div>
+                                        <div>
+                                            <div class="def-number-input number-input safari_only mb-0 w-100">
+                                                <button class="btn btn-dark btn-md my-0 p">
+                                                    <em class="fas fa-minus-square fa-lg "></em>
+                                                </button>
+                                                <label>
+                                                    <input class="quantity" min="0" name="quantity" type="number"
+                                                           value="1">
+                                                </label>
+                                                <button class="btn btn-dark btn-md my-0 p">
+                                                    <em class="fas fa-plus-square fa-lg "></em>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <a class="card-link-secondary small text-uppercase mr-3" href=""
+                                               type="button"><em
+                                                    class="fas fa-trash-alt mr-1"></em>Remove item </a>
+                                        </div>
+                                        <p class="mb-0"><span><strong>${item.price} lei</strong></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mb-4">`
+    }
 }

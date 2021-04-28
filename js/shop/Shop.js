@@ -2,23 +2,34 @@ class Shop {
     _products;
     _cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
     _id;
+    _image;
+    _name;
 
     constructor(service) {
+        if (typeof service === "undefined") return;
         this.service = service;
-        this.init().then(_ => _);
+        this.init();
     }
 
-    async init() {
+    async setProducts() {
         this._products = await this.service.getProducts();
-        StyleLoader.renderCategories([...new Set(
-            this._products.map(product => product.category)
-        )]);
-        StyleLoader.renderProducts(this._products);
+    }
 
-        this.categoryHandler();
-        this.productHandler();
+    async products() {
+        return await this.service.getProducts();
+    }
 
-        StyleLoader.renderCartCount(this.cartCount)
+    init() {
+        this.setProducts().then(_ => {
+            StyleLoader.renderCategories([...new Set(
+                this._products.map(product => product.category)
+            )]);
+
+            StyleLoader.renderProducts(this._products);
+            this.categoryHandler();
+            this.productHandler();
+            StyleLoader.renderCartCount(this.cartCount)
+        });
     }
 
     get cartCount() {
@@ -55,10 +66,8 @@ class Shop {
     }
 
     addToCart(id) {
-        (this.isInCart()) ? this.modifyQuantity(id) : this._cartProducts.push({
-            "id": id,
-            "quantity": 1
-        });
+        (this.isInCart()) ? this.modifyQuantity(id) :
+            this._cartProducts.push(this._products.find(this.searchPredicate, this), {"quantity": 1});
 
         StyleLoader.renderCartCount(this.cartCount);
         localStorage.setItem("cart", JSON.stringify(this._cartProducts));
