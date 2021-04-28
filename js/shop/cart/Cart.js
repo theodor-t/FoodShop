@@ -65,7 +65,6 @@ class Cart {
                 this.modifyQuantity(evt, 1)
             })
         });
-
         decreaseQuantityBtns.forEach(btn => {
             btn.addEventListener("click", (evt) => {
                 this.modifyQuantity(evt, -1)
@@ -77,13 +76,20 @@ class Cart {
         const quantityHolder = this.getTargetElement(
             evt.target, "def-number-input number-input safari_only mb-0 w-100")
             .querySelector(".quantity");
-        quantityHolder.value += value;
+
+        if (parseInt(quantityHolder.value) + value >= 1) {
+            quantityHolder.value = `${parseInt(quantityHolder.value) + value}`;
+            this.modifyCartVQuantity(
+                Number(this.getTargetElement(evt.target, "row mb-4").getAttribute("data-id")),
+                (Math.sign(value) === 1) ? '+' : '-'
+            )
+        }
     }
 
-    modifyValue(value) {
+    modifyCartVQuantity(itemID, operation) {
         this._cartItems.forEach(item => {
-            if (this.searchPredicate(item)) item.quantity = eval(`${item.quantity}${value}1`);
+            if (this._cartItems.find(({id}) => itemID === id)) item.quantity = eval(`${item.quantity}${operation}1`);
         });
+        localStorage.setItem("cart", JSON.stringify(this._cartItems));
     }
-
 }

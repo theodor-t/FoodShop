@@ -47,15 +47,15 @@ class Templates {
                                         </div>
                                         <div>
                                             <div class="def-number-input number-input safari_only mb-0 w-100">
-                                                <button class="btn btn-dark btn-md my-0 p">
-                                                    <em class="fas fa-minus-square fa-lg decrease__item"></em>
+                                                <button class="btn btn-dark btn-md my-0 p decrease__item">
+                                                    <em class="fas fa-minus-square fa-lg"></em>
                                                 </button>
                                                 <label>
                                                     <input class="quantity" min="0" name="quantity" type="number"
                                                            value="${item.quantity}">
                                                 </label>
-                                                <button class="btn btn-dark btn-md my-0 p">
-                                                    <em class="fas fa-plus-square fa-lg increase__item"></em>
+                                                <button class="btn btn-dark btn-md my-0 p increase__item">
+                                                    <em class="fas fa-plus-square fa-lg"></em>
                                                 </button>
                                             </div>
                                         </div>
