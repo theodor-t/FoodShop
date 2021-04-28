@@ -62,15 +62,15 @@ class Templates {
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
-                                            <a class="card-link-secondary small text-uppercase mr-3" href=""
+                                            <a class="card-link-secondary small text-uppercase mr-3 remove__cart__item"
                                                type="button"><em
-                                                    class="fas fa-trash-alt mr-1 remove__cart__item"></em>Remove item </a>
+                                                    class="fas fa-trash-alt mr-1"></em>Remove item </a>
                                         </div>
                                         <p class="mb-0"><span><strong>${item.price} lei</strong></span></p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <hr class="mb-4">`
+                            <hr class="mb-4">
+                        </div>`
     }
 }
