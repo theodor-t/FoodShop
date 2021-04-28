@@ -11,11 +11,9 @@ class Cart {
     }
 
     init() {
-        StyleLoader.renderCartCount();
-        this.createCartItems().then(_ => _);
+        StyleLoader.renderCartCount(this.cartCount);
+        StyleLoader.renderCart(this._cartItems);
     }
 
-    async createCartItems() {
 
-    }
 }

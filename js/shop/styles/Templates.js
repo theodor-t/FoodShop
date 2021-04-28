@@ -52,7 +52,7 @@ class Templates {
                                                 </button>
                                                 <label>
                                                     <input class="quantity" min="0" name="quantity" type="number"
-                                                           value="1">
+                                                           value="${item.quantity}">
                                                 </label>
                                                 <button class="btn btn-dark btn-md my-0 p">
                                                     <em class="fas fa-plus-square fa-lg "></em>

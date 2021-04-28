@@ -23,8 +23,9 @@ class StyleLoader extends Templates {
     static renderCart(products) {
         const cartContainer = document.getElementById("cart__items");
 
-
-        //products.forEach(product)
+        products.forEach(product => {
+            cartContainer.innerHTML += this.cartItemTemplate(product)
+        })
 
     }
 
