@@ -13,10 +13,6 @@ class Shop {
         this._products = await this.service.getProducts();
     }
 
-    async products() {
-        return await this.service.getProducts();
-    }
-
     init() {
         this.setProducts().then(_ => {
             StyleLoader.renderCategories([...new Set(
