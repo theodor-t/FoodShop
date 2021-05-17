@@ -4,7 +4,7 @@
     "name": "Philadelphia",
     "category": "rolls",
     "weight": "160g",
-    "image": "philadelphia.jpg",
+    "image": "1.jpg",
     "price": 60
   },
   {
@@ -12,7 +12,7 @@
     "name": "California",
     "category": "rolls",
     "weight": "160g",
-    "image": "california.jpg",
+    "image": "2.jpg",
     "price": 70
   },
    {
@@ -20,15 +20,159 @@
     "name": "Maki",
     "category": "rolls",
     "weight": "120g",
-    "image": "maki.jpg",
+    "image": "3.jpg",
     "price": 50
   },
   {
       "id": 4,
       "name": "Maki",
-      "category": "sets",
+      "category": "rolls",
       "weight": "120g",
-      "image": "maki.jpg",
+      "image": "4.jpg",
       "price": 50
-    }
+    },
+  {
+    "id": 5,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "5.jpg",
+    "price": 50
+  },
+  {
+    "id": 6,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "6.jpg",
+    "price": 50
+  },
+  {
+    "id": 7,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "7.jpg",
+    "price": 50
+  },
+  {
+    "id": 8,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "8.jpg",
+    "price": 50
+  },
+  {
+    "id": 9,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "9.jpg",
+    "price": 50
+  },
+  {
+    "id": 10,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "10.jpg",
+    "price": 50
+  },
+  {
+    "id": 11,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "11.jpg",
+    "price": 50
+  },
+  {
+    "id": 12,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "12.jpg",
+    "price": 50
+  },
+  {
+    "id": 13,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "13.jpg",
+    "price": 50
+  },
+  {
+    "id": 14,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "14.jpg",
+    "price": 50
+  },
+  {
+    "id": 15,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "15.jpg",
+    "price": 50
+  },
+  {
+    "id": 16,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "16.jpg",
+    "price": 50
+  },
+  {
+    "id": 17,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "17.jpg",
+    "price": 50
+  },
+  {
+    "id": 18,
+    "name": "Maki",
+    "category": "rolls",
+    "weight": "120g",
+    "image": "18.jpg",
+    "price": 50
+  },
+  {
+    "id": 19,
+    "name": "Maki",
+    "category": "sets",
+    "weight": "120g",
+    "image": "19.jpg",
+    "price": 50
+  },
+  {
+    "id": 20,
+    "name": "Maki",
+    "category": "sets",
+    "weight": "120g",
+    "image": "20.jpg",
+    "price": 50
+  },
+  {
+    "id": 21,
+    "name": "Maki",
+    "category": "sets",
+    "weight": "120g",
+    "image": "21.jpg",
+    "price": 50
+  },
+  {
+    "id": 22,
+    "name": "Maki",
+    "category": "sets",
+    "weight": "120g",
+    "image": "22.jpg",
+    "price": 50
+  }
 ]
