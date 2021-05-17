@@ -37,15 +37,15 @@ class Shop {
 
         categoryItems.forEach(categoryItem => {
             categoryItem.addEventListener('click', (e) => {
-                StyleLoader.renderProducts(this.getCategoryItems(e.target.innerHTML));
+                StyleLoader.renderProducts(this.getCategoryItems(e.target.innerText));
                 this.productHandler();
             })
         })
     }
 
     getCategoryItems(categoryName) {
-        if (categoryName === "all") return this._products;
-        return this._products.filter(({category}) => category === categoryName);
+        if (categoryName.toLowerCase() === "all") return this._products;
+        return this._products.filter(({category}) => category === categoryName.toLowerCase());
     }
 
     productHandler() {
@@ -60,9 +60,10 @@ class Shop {
     }
 
     addToCart(itemID) {
-        (this.isInCart()) ? this.modifyQuantity(itemID) : this._cartProducts.push(Object.assign(
-            {}, this._products.find(({id}) => this._id === itemID), {"quantity": 1}
-        ));
+        (this.isInCart()) ? this.modifyQuantity(itemID) :
+            this._cartProducts.push(Object.assign(
+                {}, this._products.find(({id}) => id === itemID), {"quantity": 1}
+                ));
 
         StyleLoader.renderCartCount(this.cartCount);
         localStorage.setItem("cart", JSON.stringify(this._cartProducts))
@@ -70,7 +71,7 @@ class Shop {
 
     modifyQuantity(id) {
         this._cartProducts.forEach(element => {
-            if (element.id === id) element.quantity += 1
+            if (element.id === id) element.quantity += 1;
         })
     }
 
