@@ -17,7 +17,7 @@
   },
    {
     "id": 3,
-    "name": "Maki",
+    "name": "Kinoa",
     "category": "rolls",
     "weight": "120g",
     "image": "3.jpg",
@@ -25,7 +25,7 @@
   },
   {
       "id": 4,
-      "name": "Maki",
+      "name": "Arigato",
       "category": "rolls",
       "weight": "120g",
       "image": "4.jpg",
@@ -33,7 +33,7 @@
     },
   {
     "id": 5,
-    "name": "Maki",
+    "name": "Kurai",
     "category": "rolls",
     "weight": "120g",
     "image": "5.jpg",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "name": "Maki",
+    "name": "Kichiro",
     "category": "rolls",
     "weight": "120g",
     "image": "6.jpg",
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "name": "Maki",
+    "name": "Toshiko",
     "category": "rolls",
     "weight": "120g",
     "image": "7.jpg",
@@ -57,7 +57,7 @@
   },
   {
     "id": 8,
-    "name": "Maki",
+    "name": "Takeshi",
     "category": "rolls",
     "weight": "120g",
     "image": "8.jpg",
@@ -65,7 +65,7 @@
   },
   {
     "id": 9,
-    "name": "Maki",
+    "name": "Krispy Spice",
     "category": "rolls",
     "weight": "120g",
     "image": "9.jpg",
@@ -73,7 +73,7 @@
   },
   {
     "id": 10,
-    "name": "Maki",
+    "name": "Swit Yudzo",
     "category": "rolls",
     "weight": "120g",
     "image": "10.jpg",
@@ -81,7 +81,7 @@
   },
   {
     "id": 11,
-    "name": "Maki",
+    "name": "Matsuo",
     "category": "rolls",
     "weight": "120g",
     "image": "11.jpg",
@@ -89,7 +89,7 @@
   },
   {
     "id": 12,
-    "name": "Maki",
+    "name": "Marbl mango",
     "category": "rolls",
     "weight": "120g",
     "image": "12.jpg",
@@ -97,7 +97,7 @@
   },
   {
     "id": 13,
-    "name": "Maki",
+    "name": "Marbl",
     "category": "rolls",
     "weight": "120g",
     "image": "13.jpg",
@@ -105,7 +105,7 @@
   },
   {
     "id": 14,
-    "name": "Maki",
+    "name": "California Dream",
     "category": "rolls",
     "weight": "120g",
     "image": "14.jpg",
@@ -113,7 +113,7 @@
   },
   {
     "id": 15,
-    "name": "Maki",
+    "name": "Tanuki",
     "category": "rolls",
     "weight": "120g",
     "image": "15.jpg",
@@ -121,7 +121,7 @@
   },
   {
     "id": 16,
-    "name": "Maki",
+    "name": "Furai",
     "category": "rolls",
     "weight": "120g",
     "image": "16.jpg",
@@ -129,7 +129,7 @@
   },
   {
     "id": 17,
-    "name": "Maki",
+    "name": "Naoki",
     "category": "rolls",
     "weight": "120g",
     "image": "17.jpg",
@@ -141,38 +141,38 @@
     "category": "rolls",
     "weight": "120g",
     "image": "18.jpg",
-    "price": 50
+    "price": 30
   },
   {
     "id": 19,
-    "name": "Maki",
+    "name": "Simple Dimple",
     "category": "sets",
     "weight": "120g",
     "image": "19.jpg",
-    "price": 50
+    "price": 125
   },
   {
     "id": 20,
-    "name": "Maki",
+    "name": "Sakura",
     "category": "sets",
     "weight": "120g",
     "image": "20.jpg",
-    "price": 50
+    "price": 140
   },
   {
     "id": 21,
-    "name": "Maki",
+    "name": "Takayama",
     "category": "sets",
-    "weight": "120g",
+    "weight": "500g",
     "image": "21.jpg",
-    "price": 50
+    "price": 401
   },
   {
     "id": 22,
-    "name": "Maki",
+    "name": "Golden Dragon",
     "category": "sets",
     "weight": "120g",
     "image": "22.jpg",
-    "price": 50
+    "price": 175
   }
 ]
